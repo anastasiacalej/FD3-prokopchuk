@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ishop</title>
+</head>
+<body>
+    <div id="container"></div> 
+      
+    <script src="https://unpkg.com/react@15/dist/react.js"></script> 
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script> 
+        
+    <script src="MyIshop2.js"></script>
+    <link rel="stylesheet" type="text/css" href="MyIshop2.css" />
+
+    <script src="MyProduct.js"></script>
+    <link rel="stylesheet" type="text/css" href="MyProduct.css" />
+  
+    <script>
+  
+      var nameShop='Магазин электроники и бытовой техники "ЭЛЕКТРО-МИР"';
+      var productHead= 
+        {name:'Наименование товара',code:'Код товара',count:'Осталось на складе',expected:'Ожидается поступление в кол-ве',price:'Стоимость',view:''}; 
+      var productList=[ 
+        {name:'Компьютер Lenovo',code:100000,count:10,expected:0,price:'1200.20 руб.',view:'https://3dnews.ru/assets/external/illustrations/2010/07/07/594859/ideacentera310.jpg'}, 
+        {name:'Планшет Lenovo',code:200000,count:8,expected:0,price:'915.50 руб.',view:'https://evrikashop.by/image/cache/catalog/i/ha/ho/50d2c44a941cd59b4c28d26fae94232a-1000x1000.jpg'}, 
+        {name:'Наушники JBL',code:300000,count:10,expected:0,price:'112.00 руб.',view:'https://avatars.mds.yandex.net/get-mpic/199079/img_id6085313955480407382/orig'},
+        {name:'Телевизор Samsung',code:400000,count:3,expected:2,price:'1505.80 руб.',view:'https://sila.by/img/catalog2015/av/tovar107138.jpg'},
+        {name:'Монитор LG',code:500000,count:3,expected:5,price:'766.00 руб.',view:'https://www.lg.com/ru/images/monitors/w1943ss/gallery/medium01.jpg'},
+        {name:'Электрогитара Yamaha Pacifica',code:600000,count:1,expected:2,price:'900.80 руб.',view:'https://musicmarket.by/images/thumbnails/1357/1000/detailed/15/Yamaha_Pacifica_012_BL.jpg'},
+        {name:'Холодильник LG',code:700000,count:2,expected:4,price:'1834.20 руб.',view:'https://www.lg.com/ru/images/refrigerators/md07516268/thumbnail/medium01.jpg'},
+        {name:'Пылесос LG',code:800000,count:3,expected:3,price:'412.60 руб.',view:'https://kst.by/image/cache/catalog/products/lg/146732/pylesos-lg-vk76r03hy-0-1000x800.jpg'},
+        {name:'Утюг Bosh',code:900000,count:5,expected:0,price:'157.20 руб.',view:'https://ария.бел/wa-data/public/shop/products/06/25/2506/images/6358/6358.750@2x.jpg'},
+        {name:'Электропианино Casio',code:110000,count:1,expected:1,price:'2350.80 руб.',view:'https://dommuzyki.ua/65964-large_default/buy-elektropianino-casio-privia-px-770-bn-kiev.jpg'},
+        {name:'Электрический чайник Aresa',code:120000,count:6,expected:4,price:'65.50 руб.',view:'https://discont.by/wa-data/public/shop/products/50/69/346950/images/73661/73661.970.jpg'},   
+      ];
+  
+      ReactDOM.render(
+        React.createElement(MyIshop,{name:nameShop,head:productHead,list:productList}), 
+        document.getElementById('container') 
+      );
+  
+    </script>
+</body>
+</html>

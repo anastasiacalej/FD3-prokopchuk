@@ -1,0 +1,10 @@
+.MyFilter .MyFilterChoose .MyFilterCheckbox{
+    margin-right: 15px; 
+ }
+.MyFilter .MyFilterChoose .MyFilterButton{
+   margin-left: 15px; 
+}
+.MyFilter select{
+    margin-top: 15px; 
+    width:250px;
+ }
