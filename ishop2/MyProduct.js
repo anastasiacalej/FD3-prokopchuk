@@ -13,15 +13,8 @@ var MyProduct = React.createClass({
       cbSelected: React.PropTypes.func.isRequired,
     },
 
-    getInitialState: function() {
-      return {
-        colorSelected:this.props.color,
-      };
-    },
-
     productClicked: function(EO) {
         this.props.cbSelected(this.props.code);
-        this.setState({colorSelected:{backgroundColor:"#bcbfc2f1"}});
     },
 
     productClickedButton: function(EO) {
@@ -30,8 +23,12 @@ var MyProduct = React.createClass({
       deleteProduct?this.props.cbSelectedButton(this.props.code):null;
     },
 
-    render: function() {      
-      return React.DOM.tr({className:'Product',style:this.state.colorSelected,onClick:this.productClicked},           
+    render: function() { 
+      var color=(this.props.code==this.props.selectedProduct)//если код товара==коду выбранного товара
+      ?{backgroundColor:"#bcbfc2f1"}//выделяем товар цветом
+      :null;
+
+      return React.DOM.tr({className:'Product',style:color,onClick:this.productClicked},           
       React.DOM.td({className:'View'},
                     React.DOM.img({className:'ViewImg',src:this.props.view}),),
       React.DOM.td({className:'Name'},this.props.name),

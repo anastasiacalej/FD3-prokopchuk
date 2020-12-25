@@ -17,7 +17,6 @@
   margin: 0 auto;
 }
 
-
 .MyIshop .Products .HeadProduct
 {
   height: 100px;
@@ -26,23 +25,16 @@
   border-top: 1px solid #82818166;
 }
 
-
-
 .MyIshop .Products .HeadProduct .Name
 {
   font-weight: inherit;
 }
-
-
-
 
 .MyIshop .Products .HeadProduct .Count
 { 
   text-align: left;     
   padding-left: 0px;  
 }
-
-
 
 .MyIshop .Products .HeadProduct .Expected
 {

@@ -27,8 +27,7 @@ var MyIshop = React.createClass({
 
     getInitialState: function() {
         return { 
-          selectedProduct: null,
-          colorSelected:{backgroundColor:"white"},
+          selectedProduct: null,//код выбранного товара
           currentList:this.props.list,
         };
     },
@@ -41,9 +40,8 @@ var MyIshop = React.createClass({
     productSelectedButton: function(code) {
         console.log('удалена строка '+code);
         var m=this.state.currentList;
-        var a=m.indexOf(this.state.currentList.find(v=>v.code==code));
-        m.splice(a,1);
-        this.setState( {currentList:m} );
+        m.splice(m.indexOf(this.state.currentList.find(v=>v.code==code)),1);//удаляем товар
+        this.setState( {currentList:m} );//обновляем список товаров
     },  
     
     render: function() {
@@ -61,9 +59,9 @@ var MyIshop = React.createClass({
      
       var listsCode=this.props.list.map(v=>                   
         React.createElement(MyProduct,{key:v.code,name:v.name,code:v.code,price:v.price,
-            count:v.count,expected:v.expected,view:v.view,color:this.state.colorSelected,
-            cbSelected:this.productSelected,cbSelectedButton:this.productSelectedButton,
-            selectedProduct:this.state.selectedProduct})  
+            count:v.count,expected:v.expected,view:v.view,
+            cbSelected:this.productSelected,cbSelectedButton:this.productSelectedButton,//колбэки
+            selectedProduct:this.state.selectedProduct})//код выбранного товара  
       );
 
       return React.DOM.div( {className:'MyIshop'}, 
