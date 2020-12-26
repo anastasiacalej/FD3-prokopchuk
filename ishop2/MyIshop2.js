@@ -39,9 +39,7 @@ var MyIshop = React.createClass({
 
     productSelectedButton: function(code) {
         console.log('удалена строка '+code);
-        var m=this.state.currentList;
-        m.splice(m.indexOf(this.state.currentList.find(v=>v.code==code)),1);//удаляем товар
-        this.setState( {currentList:m} );//обновляем список товаров
+        this.setState( {currentList:this.state.currentList.filter(v=>v.code!=code)} );
     },  
     
     render: function() {
@@ -57,7 +55,7 @@ var MyIshop = React.createClass({
             React.DOM.td({className:'Button'},'Контроль'),   
           );
      
-      var listsCode=this.props.list.map(v=>                   
+      var listsCode=this.state.currentList.map(v=>                   
         React.createElement(MyProduct,{key:v.code,name:v.name,code:v.code,price:v.price,
             count:v.count,expected:v.expected,view:v.view,
             cbSelected:this.productSelected,cbSelectedButton:this.productSelectedButton,//колбэки

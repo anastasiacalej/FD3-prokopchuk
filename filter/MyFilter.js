@@ -17,21 +17,26 @@ var MyFilter = React.createClass({
     },
 
     freeAnswerTextChanged: function(EO) {
-      var strValue=EO.target.value; 
-      console.log('Текст поиска изменён - '+strValue); 
-      this.setState( {freeanswertext:strValue} );
-      this.state.selectedCheckbox//если checkbox активирован - сортируем массив, если нет - сортировка не требуется 
-      ?this.setState( {newMassiv:this.props.massiv.filter(v=>(new RegExp(strValue)).test(v)).sort()})
-      :this.setState( {newMassiv:this.props.massiv.filter(v=>(new RegExp(strValue)).test(v))});
+      this.setState( {freeanswertext:EO.target.value},this.processList);
     },
 
     checkboxClicked: function(EO) {
-      this.state.selectedCheckbox//если checkbox деактивирован - возвращаем порядок как в массиве, в обратной ситуации - сортируем
-      ?this.setState( {selectedCheckbox: false,
-                       newMassiv:this.props.massiv.filter(v=>(new RegExp(this.state.freeanswertext)).test(v))})
-      :this.setState( {selectedCheckbox: true,
-                       newMassiv:this.props.massiv.filter(v=>(new RegExp(this.state.freeanswertext)).test(v)).sort()});
+     this.setState( {selectedCheckbox: EO.target.checked},this.processList);
     },
+
+    processList: function() {
+      let result=this.props.massiv;
+      if(this.state.freeanswertext)
+         result=result.filter(v=>v.indexOf(this.state.freeanswertext)!=-1);
+      else
+         result=result.slice();
+         
+      if(this.state.selectedCheckbox)
+         result.sort();
+      
+      this.setState( {newMassiv: result});      
+    },
+
 
     clickButton: function(EO){//возвращаем первоначальное состояние по нажатии на "сброс"
       this.setState( {newMassiv:this.props.massiv,
@@ -40,13 +45,13 @@ var MyFilter = React.createClass({
     },
     
     render: function() {
-      var massivOption=this.state.newMassiv.map( v =>
+      let massivOption=this.state.newMassiv.map( v =>
         React.DOM.option({key:v},v)//ключ - само слово(т.к.слова уникальны)
       );
 
       return React.DOM.div( {className:'MyFilter'},
         React.DOM.div( {className:'MyFilterChoose'},          
-          React.DOM.input({type:'checkbox',name:'check',className:'MyFilterCheckbox',checked:this.state.selectedCheckbox,
+          React.DOM.input({type:'checkbox',name:'check',className:'MyFilterCheckbox', checked:this.state.selectedCheckbox,
             onClick:this.checkboxClicked}
             ),
           React.DOM.input({type:'text',name:'chooseText',className:'MyFilterText', value:this.state.freeanswertext,
