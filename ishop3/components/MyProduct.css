@@ -1,0 +1,75 @@
+
+.MyIshop .Products .Product
+{
+  height: 150px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.MyIshop .Products .Name
+{
+  width: 100px;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: left;
+  padding-left: 20px;
+  border-bottom: 1px solid #82818166;
+}
+
+.MyIshop .Products  .View
+{
+  text-align: center;  
+  width: 50px;
+  border-bottom: 1px solid #82818166;
+}
+
+.MyIshop .Products  .View .ViewImg
+{
+  width: 100px;
+  text-align: center;
+}
+
+.MyIshop .Products  .Code
+{
+  padding-left: 60px;  
+  width: 100px;
+  border-bottom: 1px solid #82818166;
+}
+
+.MyIshop .Products  .Price
+{
+  padding-left: 20px;  
+  width: 100px;
+  border-bottom: 1px solid #82818166;
+}
+
+.MyIshop .Products  .Count
+{
+  text-align: center;  
+  padding-left: 20px;  
+  width: 70px;
+  border-bottom: 1px solid #82818166;
+}
+
+.MyIshop .Products  .Expected
+{
+  text-align: center;  
+  padding-left: 30px;  
+  width: 100px;
+  border-bottom: 1px solid #82818166;
+  color: red;
+}
+
+.MyIshop .Products  .Button
+{ 
+  border-bottom: 1px solid #82818166;
+  width: 250px;
+  text-align: center;
+}
+
+.MyIshop .Products  .Button .InputButton
+{ 
+  padding: 5px 20px;
+  font-size: 15px;
+}
+
