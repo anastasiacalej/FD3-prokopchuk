@@ -121,14 +121,10 @@ class MyCardProd extends React.Component{
 
     render() { 
 
-      var display=(this.props.code==this.props.selectedProduct)//если код товара==коду выбранного товара
-      ?{display:"block"}
-      :{display:"none"};
-      
       switch(this.props.workMode){
         case 1:
           var card=(
-        <div className='CardProd' style={display}>
+        <div className='CardProd'>
           <span className='CardName'>{this.props.name}</span><br/>
           <img className='ViewImgCard' src={this.props.view}/><br/>        
           <span>{'Код: '+this.props.code}</span><br/>
@@ -141,7 +137,7 @@ class MyCardProd extends React.Component{
 
         case 2:
           var card=(
-          <div className='CardProd' style={display}>
+          <div className='CardProd'>
           <span className='CardName'>{'Редактирование текущего товара'}</span><br/>
           
           <img className='ViewImgCard' src={this.state.valueURL}/><br/>
