@@ -101,22 +101,29 @@ class MyIshop3 extends React.Component{
             productIsEdit={this.state.productIsEdit}
         /> 
       );
+      
+      //находим выделенный объект для передачи его в пропсах для формирования карты товара
+      var obj=this.state.currentList.find(v=>this.state.selectedProduct===v.code);
 
       switch(this.state.workMode){
         case 1:
-          var listsCard=(this.state.currentList.map(v=>                   
-          <MyCardProd key={v.code} name={v.name} code={v.code} price={v.price}
-            count={v.count} view={v.view} expected={v.expected}
+          var listsCard=(                   
+          <MyCardProd key={obj.code} name={obj.name} 
+            code={obj.code} price={obj.price}
+            count={obj.count} view={obj.view} 
+            expected={obj.expected}
             selectedProduct={this.state.selectedProduct}
             validForm={true}
             workMode={this.state.workMode}
           /> 
-          ));
+          );
           break;
         case 2:
-            var listsCard=(this.state.currentList.map(v=>                   
-            <MyCardProd key={v.code} name={v.name} code={v.code} price={v.price}
-              count={v.count} view={v.view} expected={v.expected}
+            var listsCard=(                   
+            <MyCardProd key={obj.code} name={obj.name} 
+              code={obj.code} price={obj.price}
+              count={obj.count} view={obj.view} 
+              expected={obj.expected}
               selectedProduct={this.state.selectedProduct}
               workMode={this.state.workMode}
               validForm={true}
@@ -124,7 +131,7 @@ class MyIshop3 extends React.Component{
               cbProductIsEdit={this.productIsEdit}
               cbWorkMode={this.workMode}
             /> 
-            ));
+            );
             break;
         case 3:
             var listsCard=(                
