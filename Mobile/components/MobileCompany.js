@@ -41,7 +41,6 @@ class MobileCompany extends React.PureComponent {
   
   showAllClients = () => {
     let newClients=[...this.state.clients]; // копия всех клиентов
-    if(newClients.length!==this.state.showClients.length)
       this.setState({showClients:newClients});
   };
 
@@ -50,7 +49,6 @@ class MobileCompany extends React.PureComponent {
     newClients=newClients.filter( c => 
       c.balance>=0 
     );
-    if(newClients.length!==this.state.showClients.length)
       this.setState({showClients:newClients});
   };
 
@@ -59,7 +57,6 @@ class MobileCompany extends React.PureComponent {
     newClients=newClients.filter( c => 
       c.balance<0 
     );
-    if(newClients.length!==this.state.showClients.length)
       this.setState({showClients:newClients});
   };
 
@@ -108,11 +105,12 @@ class MobileCompany extends React.PureComponent {
   };
 
   addClient = ()=>{
-      let idAddClient=this.state.clients.length+101;//присваиваем новому клиенту уникальный id
+      let idAddClient=this.state.clients[this.state.clients.length-1].id+1;//присваиваем новому клиенту уникальный id
       let addClient={id:idAddClient};//формируем начальный хэш нового клиента
-      if(!this.state.addClient)
-    {this.setState({addClient: addClient});
-    eventsClicked.emit('EAddCurrentClientClick');}
+      if(!this.state.addClient){
+         this.setState({addClient: addClient});
+         eventsClicked.emit('EAddCurrentClientClick');
+      }
   };
 
   editCancelClient = ()=>{
