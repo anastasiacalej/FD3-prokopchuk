@@ -1,0 +1,48 @@
+﻿.MobileCompany
+{
+  /* border: double gray 3px; */
+  width: 1000px;
+  /* padding: 3px 7px; */
+  /* background-color: lightyellow; */
+}
+
+.MobileCompany .ButtonName
+{
+  padding: 5px 10px;
+  /* margin-bottom: 10px; */
+}
+
+.MobileCompanyName
+{
+  font-weight: bold;
+  padding: 20px 0px;
+  border-bottom: solid #b3afaf8a 1px; 
+}
+
+.CurrentName
+{
+  margin-top: 10px; 
+}
+
+.MobileClientsFilter
+{
+  padding:20px 0px;
+  border-bottom: solid #b3afaf8a 1px; 
+}
+
+.HatClients{
+  font-weight: bold;
+}
+
+.MobileCompanyClients{
+  margin: 10px 0px;
+  border-spacing: 0px;
+  width: 100%;
+}
+
+.MobileCompanyClients td
+{
+  padding: 20px;
+  border-top:solid #b3afaf8a 1px;
+  
+}

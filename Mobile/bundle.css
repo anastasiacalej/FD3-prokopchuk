@@ -1,0 +1,96 @@
+div.MobileClient
+{
+  padding: 0px 0;
+}
+
+span.MobileClientBalance
+{
+  float: right;
+  width: 30px;
+  font-weight: bold;
+  text-align: right;
+}
+
+span.MobileClientFIO
+{
+  margin-right: 30px;
+}
+
+.StatusActive
+{
+  background-color:green;
+  text-align: center;
+}
+
+.StatusBlocked
+{
+  background-color:red;
+  text-align: center;
+}
+
+.Edit
+{
+  height: 20px;
+  font-style: italic;
+  background-color: #d9d7d797;
+}
+
+.Highlight{
+  background-color:#299e2d91;
+}
+
+ input.Validate::placeholder{
+   color:red;
+ }
+
+.MobileCompany
+{
+  /* border: double gray 3px; */
+  width: 1000px;
+  /* padding: 3px 7px; */
+  /* background-color: lightyellow; */
+}
+
+.MobileCompany .ButtonName
+{
+  padding: 5px 10px;
+  /* margin-bottom: 10px; */
+}
+
+.MobileCompanyName
+{
+  font-weight: bold;
+  padding: 20px 0px;
+  border-bottom: solid #b3afaf8a 1px; 
+}
+
+.CurrentName
+{
+  margin-top: 10px; 
+}
+
+.MobileClientsFilter
+{
+  padding:20px 0px;
+  border-bottom: solid #b3afaf8a 1px; 
+}
+
+.HatClients{
+  font-weight: bold;
+}
+
+.MobileCompanyClients{
+  margin: 10px 0px;
+  border-spacing: 0px;
+  width: 100%;
+}
+
+.MobileCompanyClients td
+{
+  padding: 20px;
+  border-top:solid #b3afaf8a 1px;
+  
+}
+
+
+/*# sourceMappingURL=bundle.css.map*/
