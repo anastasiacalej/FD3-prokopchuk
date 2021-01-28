@@ -105,7 +105,7 @@ class MobileCompany extends React.PureComponent {
   };
 
   addClient = ()=>{
-      let idAddClient=this.state.clients[this.state.clients.length-1].id+1;//присваиваем новому клиенту уникальный id
+      let idAddClient=this.state.clients[this.state.clients.length].id;//присваиваем новому клиенту уникальный id
       let addClient={id:idAddClient};//формируем начальный хэш нового клиента
       if(!this.state.addClient){
          this.setState({addClient: addClient});
