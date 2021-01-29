@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`работа кнопки "Редактировать" 1`] = `
+<tr
+  className="MobileClient"
+>
+  <td>
+    Иванов
+  </td>
+  <td>
+    Иван
+  </td>
+  <td>
+    Иванович
+  </td>
+  <td>
+    200
+  </td>
+  <td
+    className="StatusActive"
+  >
+    active
+  </td>
+  <td>
+    <input
+      className="ButtonName"
+      onClick={[Function]}
+      type="button"
+      value="Редактировать"
+    />
+  </td>
+  <td>
+    <input
+      className="ButtonName"
+      onClick={[Function]}
+      type="button"
+      value="Удалить"
+    />
+  </td>
+</tr>
+`;
+
+exports[`работа кнопки "Редактировать" 2`] = `
+<tr
+  className="MobileClient"
+>
+  <td>
+    Иванов
+  </td>
+  <td>
+    Иван
+  </td>
+  <td>
+    Иванович
+  </td>
+  <td>
+    200
+  </td>
+  <td
+    className="StatusActive"
+  >
+    active
+  </td>
+  <td>
+    <input
+      className="ButtonName"
+      onClick={[Function]}
+      type="button"
+      value="Редактировать"
+    />
+  </td>
+  <td>
+    <input
+      className="ButtonName"
+      onClick={[Function]}
+      type="button"
+      value="Удалить"
+    />
+  </td>
+</tr>
+`;
