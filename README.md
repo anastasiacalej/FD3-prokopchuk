@@ -1,2 +1,2 @@
-# FD3-prokopchuk
+# FD3-prokopchuk-react
 homeworks
